@@ -44,8 +44,6 @@ class MenuModelViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
-        new_vote = Vote.objects.create(menu=menu, employee=user)
-
         return Response(
             {'message': 'Vote recorded successfully'},
             status=status.HTTP_201_CREATED
